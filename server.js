@@ -5,6 +5,8 @@ const app = express();
 
 const reservations = [];
 
+const PORT = process.env.PORT || 6969;
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -42,4 +44,4 @@ app.post('/api/clear', (req, res) => {
     reservations.splice(0, reservations.length);
 });
 
-app.listen(6969);
+app.listen(PORT);
