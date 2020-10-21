@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
+const PORT = process.env.PORT || 8080;
 
 const reservations = [];
 
@@ -42,4 +43,4 @@ app.post('/api/clear', (req, res) => {
     reservations.splice(0, reservations.length);
 });
 
-app.listen(6969);
+app.listen(PORT);
